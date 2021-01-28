@@ -292,7 +292,6 @@ span {
 }
 
 #k {
-    height: 94vh;
     width: 100vw;
     z-index: 500;
     position: absolute;
@@ -379,6 +378,16 @@ p {
 
 h1 {
     color: #fff;
+}
+
+.img-home-right {
+    object-fit: cover;
+    object-position: 50% 40%;
+}
+
+.img-home-left {
+    object-fit: cover;
+    object-position: 60% 30%;
 }
 
 
