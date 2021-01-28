@@ -1,0 +1,388 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(400deg, rgba(0, 4, 8, 1), rgba(0, 4, 8, 1)0%);
+}
+
+.bg-dark {
+    background-color: #000408!important;
+}
+
+#slash {
+    color: rgb(204, 23, 23);
+    font-size: 2rem;
+    font-weight: 600;
+    margin-left: 5px;
+}
+
+.fa-html5 {
+    background-color: rgba(207, 12, 12, 0.795);
+    font-size: 5rem;
+}
+
+.navbar-dark .navbar-brand {
+    color: #fff;
+    font-family: Hachi Maru Pop;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #fff;
+    font-family: Hachi Maru Pop;
+}
+
+span {
+    color: #fff;
+    font-family: Hachi Maru Pop;
+}
+
+
+/*partie etoile */
+
+.star-rating {
+    direction: rtl;
+    display: inline-block;
+    padding: 20px;
+}
+
+.star-rating input[type=radio] {
+    display: none;
+}
+
+.star-rating label {
+    color: #bbb;
+    font-size: 18px;
+    padding: 0;
+    cursor: pointer;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+.star-rating label:hover,
+.star-rating label:hover~label,
+.star-rating input[type=radio]:checked~label {
+    color: #f2b600
+}
+
+#contactId {
+    margin: 0;
+    padding: 0;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(400deg, rgba(0, 4, 8, 1), rgba(0, 4, 8, 1)0%);
+}
+
+.contactTeams a {
+    display: inline-block;
+    font-size: 10px;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    color: #0099FF;
+    /* margin: 0 16px; */
+    transition: .4s linear;
+    position: relative;
+}
+
+.contactTeams a::before,
+.contactTeams a::after {
+    content: "";
+    position: absolute;
+    box-sizing: border-box;
+    width: 100px;
+    height: 100px;
+    left: 0;
+    top: 0;
+    transition: .4s linear;
+}
+
+.contactTeams a:hover {
+    transform: scale(.8);
+}
+
+.contactTeams a:hover::before {
+    border-left: 4px solid;
+    border-right: 4px solid;
+    transform: skewX(20deg);
+}
+
+.contactTeams a:hover::after {
+    border-top: 4px solid;
+    border-bottom: 4px solid;
+    transform: skewY(-20deg);
+}
+
+.footer {
+    justify-content: center;
+    text-align: center;
+}
+
+.footer a {
+    font-size: 2rem;
+    color: #fff;
+}
+
+.footer p {
+    font-size: 3rem;
+    color: #fff;
+}
+
+@media (max-width: 576px) {
+    .footer p {
+        font-size: 1rem !important;
+    }
+    .footer a {
+        font-size: 0.8rem !important;
+    }
+}
+
+#slash1 {
+    color: rgb(204, 23, 23);
+    font-size: 5rem;
+    font-weight: 600;
+}
+
+#copyright {
+    font-size: 1rem;
+    color: #fff;
+}
+
+.middle {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media (max-width: 576px) {
+    .middle {
+        visibility: hidden;
+    }
+    #contactId {
+        height: 43vh;
+    }
+    #slash1 {
+        font-size: 2rem;
+    }
+}
+
+.mouse {
+    width: 1px;
+    height: 1px;
+    border: 4px solid;
+    border-radius: 60%;
+}
+
+.mouse::before {
+    content: "";
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 30px;
+    background: #fff;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    opacity: 1;
+    animation: mouse 2s infinite;
+}
+
+@keyframes mouse {
+    from {
+        opacity: 1;
+        top: 30px;
+    }
+    to {
+        opacity: 0;
+        top: 150px;
+    }
+}
+
+@media (max-width: 576px) {
+    main {
+        grid-area: mainGrid;
+    }
+    footer {
+        grid-area: footerGrid;
+    }
+    .smGrid {
+        display: grid;
+        grid-template-areas: "footerGrid footerGrid footerGrid footerGrid" "mainGrid mainGrid mainGrid mainGrid";
+    }
+}
+
+#pMove {
+    animation: type 5s infinite steps(46);
+    overflow: hidden;
+    white-space: nowrap;
+    width: 46ch;
+    font-size: 1.5rem;
+    color: #fff;
+    font-family: consolas;
+    border-right: 4px solid rgb(204, 23, 23);
+    font-weight: 900;
+    text-shadow: 4px 3px 4px rgb(22, 22, 22), 0 0 1em blue, 0 0 0.2em blue;
+}
+
+@keyframes type {
+    0% {
+        width: 0ch;
+    }
+    100% {
+        width: 46ch;
+    }
+}
+
+@media(max-width: 808px) {
+    #pMove {
+        animation: type steps(0);
+        white-space: initial;
+        width: auto;
+        border-right: none;
+    }
+    @keyframes type {
+        100% {
+            width: 46ch;
+        }
+        100% {
+            width: 46ch;
+        }
+    }
+}
+
+#pPMove {
+    margin-top: 20%;
+    margin-left: 25%;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.5rem;
+    font-family: Hachi Maru Pop;
+    text-shadow: 4px 3px 4px rgb(22, 22, 22), 0 0 1em blue, 0 0 0.2em blue;
+}
+
+#pPPMove {
+    height: 80vh;
+    width: 100vw;
+    z-index: 1000;
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translateX(-50%);
+}
+
+@media(max-width: 540px) {
+    #pPPMove {
+        height: 80vh;
+        width: 100vw;
+        z-index: 1000;
+        position: absolute;
+        top: 50%;
+        left: 30%;
+        transform: translateX(-50%);
+    }
+}
+
+#k {
+    height: 94vh;
+    width: 100vw;
+    z-index: 500;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    opacity: 0;
+}
+
+p {
+    color: #fff;
+}
+
+@media (max-width: 576px) {
+    #imgMysql {
+        grid-area: a;
+        margin-left: 20%;
+    }
+    #starMysql {
+        grid-area: b;
+    }
+    .class1 {
+        display: grid;
+        grid-template-areas: "b b b b" "a a a a";
+        text-align: center;
+        justify-content: center;
+        float: none;
+    }
+    #imgPhp {
+        grid-area: c;
+        margin-left: 20%;
+    }
+    #starPhp {
+        grid-area: d;
+    }
+    .class2 {
+        display: grid;
+        grid-template-areas: "d d d d" "c c c c";
+        text-align: center;
+        justify-content: center;
+        float: none;
+    }
+    #imgWp {
+        grid-area: e;
+        margin-left: 20%;
+    }
+    #starWp {
+        grid-area: f;
+    }
+    .class3 {
+        display: grid;
+        grid-template-areas: "f f f f" "e e e e";
+        text-align: center;
+        justify-content: center;
+        float: none;
+    }
+    #imgNjs {
+        grid-area: j;
+        margin-left: 20%;
+    }
+    #starNjs {
+        grid-area: h;
+    }
+    .class4 {
+        display: grid;
+        grid-template-areas: "h h h h" "j j j j";
+        text-align: center;
+        justify-content: center;
+        float: none;
+    }
+    .star-rating {
+        text-align: center;
+        justify-content: center;
+        float: none;
+        display: flex;
+    }
+}
+
+#imgHome img {
+    height: 80vh;
+    float: right;
+}
+
+h1 {
+    color: #fff;
+}
+
+
+/* 
+#cvId img {
+    height: 80vh;
+} */
